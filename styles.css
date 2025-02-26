@@ -1,3 +1,8 @@
+:root{
+    --bg-color-ppal: rgb(102, 198, 246);
+    --bg-color-transparent: rgba(102, 198, 246, 0.8);
+    --color-font: rgb(6, 6, 108);
+}
 /* Estilos generales */
 * {
     margin: 0;
@@ -11,14 +16,60 @@
     margin: 0;
     padding: 40px 0px 0px 0px;
     min-height: 100vh;
-    background-color: #000000;
-    color: #9ad79b;
+    background-color: var(--bg-color-ppal);
+    color: var(--color-font);
+  }
+
+  main {
+    position: relative;
   }
 
   header{
     position: fixed;
     width: 100%;
-    background-color: rgba(0,0,0,0.9);
+    z-index: 2;
+    background-color: var(--bg-color-transparent);
     top: 0;
     left: 0;
+  }
+
+.content{
+    position: absolute;
+    left: 10px;
+}
+
+aside{
+    position: absolute;
+    right: 10%;
+}
+
+.features{
+    position: relative;
+    top: 175px;
+}
+
+.features>h2{
+    text-align: center;
+}
+
+.features-element {
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.features-element:last-child{
+    padding-bottom: 45px;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    z-index: 1;
+    padding: 10px 0px;
+    background-color: var(--bg-color-ppal);
+  }
+
+  footer>p{
+    text-align: center;
   }
